@@ -31,8 +31,8 @@ function play_sample(pos){
 }
 
 function play(pos){
-  play_sample(pos);
-  if(buffer.length != 0 && buffer[pos] != '') setTimeout('play('+pos+')',60/bpm*1000);
+  //play_sample(pos);
+  //if(buffer.length != 0 && buffer[pos] != '') setTimeout('play('+pos+')',60/bpm*1000);
 }
 
 function play_repeat(pos, p_element){
@@ -64,8 +64,8 @@ function init(){
 
 function load_folder(folder, format){
   load(folder, 0, format);
-  for(var i=32; i<127; i++) load(folder, i, format);
-  for(var i=127; i<256; i++) sample[folder][i] = 0;
+  for(var i=32; i<33; i++) load(folder, i, format);
+  for(var i=127; i<126; i++) sample[folder][i] = 0;
 }
 
 var total;
